@@ -1,0 +1,23 @@
+<h1>  Categoria</h1>
+<div class=" container">
+
+<br/>
+<div>
+
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input [(ngModel)]="categoria.nombre" type="text" class="form-control" id="nombre"  placeholder="Ingresar nombre">
+
+    </div>
+    <div class="form-group">
+      <label for="descripcion">Descripcion</label>
+      <input [(ngModel)]="categoria.descripcion" type="text" class="form-control" id="descripcion"  placeholder="Ingresar una descripcion">
+
+    </div>
+    
+    <button style=" margin-right: 10px" type="submit" class="btn btn-outline-dark" routerLink="/categoria-list">Atras</button>
+    <button (click)="saveCategoria()" class="btn btn-primary" >Guardar</button>
+    
+    
+  </div>
+</div>

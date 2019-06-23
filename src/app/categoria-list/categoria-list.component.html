@@ -1,0 +1,30 @@
+<h1>Lista de categorias</h1>
+<button type="button" class="btn btn-primary" routerLink="/categoria-form">Nueva Categoria</button>
+
+<br/>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Descipcion</th>
+        <th scope="col"></th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let cat of categorias">
+        <th >{{cat.id}}</th>
+        <td>{{cat.nombre}}</td>
+        <td>{{cat.descripcion}}</td>
+        <td>
+          <a class="btn btn-primary btn-sm" routerLink="/categoria-form/{{cat.id}}">Editar</a>
+          <a class="btn btn-danger btn-sm" (click)="delete(cat.id)">Eliminar</a>
+        </td>
+        
+      </tr>
+
+      
+    </tbody>
+  </table>
